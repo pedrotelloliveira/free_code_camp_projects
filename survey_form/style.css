@@ -1,0 +1,28 @@
+html:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(
+        115deg,
+        rgba(58, 58, 158, 0.8),
+        rgba(204, 12, 12, 0.7)
+      ), url(res/points_cubes_background_light_91691_2560x1440.jpg); 
+    width: 100%;
+    height: 100%;
+    opacity : 0.8;
+    z-index: -1;
+}
+
+body {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
