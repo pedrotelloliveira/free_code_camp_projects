@@ -206,6 +206,10 @@ iframe {
 		margin-top: 250px;
 	}
 
+	.icon {
+		display: none;
+	}
+
 	.container {
 		flex-direction: column;
 	}
