@@ -1,22 +1,164 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Ubuntu", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	color: white;
+	line-height: 1em;
+	scroll-behavior: smooth;
+	text-align: justify;
+}
+
+body {
+	min-width: 290px;
+	background-color: #ffffff;
+	line-height: 2.5em;
+	background-color: #34495e;
+}
+
+header {
+	font-size: 30px;
+	/* color: rgb(48, 48, 48); */
 }
 
 #navbar {
 	position: fixed;
-	min-width: 290px;
-	top: 0px;
-	left: 0px;
-	width: 300px;
+	min-width: 300px;
+	width: 310px;
 	height: 100%;
-	border-right: solid;
-	border-color: rgba(0, 22, 22, 0.4);
+	top: 0;
+	left: 0;
+	line-height: 1.5em;
+	border-right: 3px solid #192a3a;
+	display: flex;
+	flex-direction: column;
+}
+
+#navbar header {
+	padding: 40px 0;
+}
+
+#navbar ul {
+	height: 100%;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#navbar a {
+	border-top: 3px solid rgba(0, 22, 22, 0.4);
+	padding: 15px;
+	display: block;
+	text-decoration: none;
+	color: white;
+	transition: line-height 0.5s;
+}
+
+#navbar a:hover{
+	background-color:  rgba(0, 22, 22, 0.4);
+	color: #FBA90A;
+	line-height: 3em;
 }
 
 #main-doc {
-	position: absolute;
 	margin-left: 310px;
-	padding: 20px;
-	margin-bottom: 110px;
-  }
+	padding: 20px 50px;
+	margin-bottom: 50px;
+}
+
+#main-doc header{
+	padding: 40px 0 10px 0;
+}
+
+#main-doc section ul {
+	padding-left: 50px;
+}
+
+#main-doc article {
+	padding-left: 15px;
+}
+
+code {
+	background-color: #bdbdbd;
+	display: block;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 15px;
+	color: rgb(63, 62, 62);
+}
+
+@media (max-width:1000px) {
+	body {
+		display: flex;
+	flex-direction: column;
+	}
+
+	#navbar {
+		position: fixed;
+		width: 100%;
+		height: 240px;
+		top: 0;
+		line-height: 1.5em;
+		display: flex;
+		flex-direction: column;
+		background-color:  #34495e;
+		text-align: center;
+	}
+
+	#navbar header {
+		padding: 20px 0;
+		font-size: 20px;
+	}
+
+	#navbar ul {
+		border-top: 3px solid #192a3a;
+		border-bottom: 3px solid #192a3a;
+	}
+
+	#main-doc {
+		padding: 0px 50px;
+		margin: 0 0 50px 0;
+		z-index: -1;
+		position: fixed;
+		top: 230px;
+		overflow-y: auto;
+		height: 75%;
+		scroll-behavior: smooth;
+	}
+}
+
+@media (max-width: 1000px) and (max-height: 700px) {
+	#navbar {
+		position: fixed;
+		width: 100%;
+		height: 130px;
+		top: 0;
+		line-height: 1.5em;
+		display: flex;
+		flex-direction: column;
+		background-color:  #34495e;
+		text-align: center;
+	}
+
+	#main-doc {
+		padding: 0px 50px;
+		margin: 0 0 50px 0;
+		z-index: -1;
+		position: fixed;
+		top: 120px;
+		overflow-y: auto;
+		height: 65%;
+		scroll-behavior: smooth;
+	}
+
+	#navbar a {
+		transition: none;
+	}
+
+	#navbar a:hover{
+		line-height: 1.5em;
+	}
+}
