@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: "Ubuntu", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	color: white;
+	line-height: 1em;
+	scroll-behavior: smooth;
+	text-align: justify;
+	line-height: 2.5em;
+}
+
+body {
+	background-color: #41436a;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#navbar {
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+	background-color: #984063;
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+#navbar ul {
+	display: flex;
+	list-style: none;
+}
+
+#navbar li {
+	flex: 1 1 0;
+	width: 0;
+}
+
+#navbar a {
+	display: block;
+	padding: 15px;
+	text-align: center;
+	font-size: 2rem;
+}
+
+#navbar a:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+#welcome-section {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(45deg, rgba(195, 20, 50, 0.4), rgba(36, 11, 54, 0.4));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4rem;
+}
+
+#projects {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4rem;
+	background-image: linear-gradient(115deg, rgba(69, 69, 71, 0.521), rgba(69, 69, 71, 0.521)), url(res/project_backgound.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+#contact {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4rem;
+}
