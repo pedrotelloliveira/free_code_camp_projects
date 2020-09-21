@@ -53,18 +53,90 @@ a {
 #welcome-section {
 	width: 100%;
 	height: 100vh;
-	background-image: linear-gradient(45deg, rgba(195, 20, 50, 0.4), rgba(36, 11, 54, 0.4));
+	background-image: linear-gradient(45deg, rgba(195, 20, 50, 0.6), rgba(36, 11, 54, 0.6));
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	/* align-items: center; */
+	/* justify-content: center; */
 	font-size: 4rem;
+}
+
+#welcome-section h1 {
+	align-self: center;
+	margin: auto;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+.flip-box {
+	background-color: transparent;
+	width: 320px;
+	height: 320px;
+	border-radius: 10px;
+	perspective: 1000px;
+	margin: 90px 0 0 20px;
+	position: absolute;
+}
+
+.flip-box-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+	transform: rotateX(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.flip-box-front {
+	background-color: #41436a;
+	background-image: url(res/20150922_113218.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: rgb(255, 255, 255);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: end;
+	border-radius: 5px;
+}
+
+.flip-box-back {
+	transform: rotateX(180deg);
+}
+
+.flip-box-front img {
+	width: 150px;
+	height: 150px;
+	margin-top: 15px;
+	border-radius: 50%;
+}
+
+.flip-box-front h6 {
+	padding-top: 30px;
 }
 
 #projects {
 	min-height: 100vh;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	flex-direction: column;
+	/* align-items: center;
+	justify-content: center; */
 	font-size: 4rem;
 	background-image: linear-gradient(115deg, rgba(69, 69, 71, 0.521), rgba(69, 69, 71, 0.521)), url(res/project_backgound.jpg);
 	background-size: cover;
@@ -73,10 +145,31 @@ a {
 	background-position: center;
 }
 
+#projects h1 {
+	align-self: center;
+	margin-top: 50px;
+}
+
+.project-tile {
+	display: flex;
+	align-self: center;
+	margin: auto;
+}
+
+.project-tile iframe {
+	width: 300px;
+	height: 300px;
+	margin: 10px;
+}
+
 #contact {
 	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	font-size: 4rem;
+}
+
+@media (max-width: 1000px) {
 }
